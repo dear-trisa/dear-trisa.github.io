@@ -48,3 +48,15 @@ body.locked * {
 body.locked video {
   pointer-events: none;
 }
+
+@media screen and (max-width: 480px) {
+  #authModal .modal-content {
+    width: 80%;
+    padding: 1.5rem 1rem;
+  }
+  
+  #authModal .modal-content h2 {
+    font-size: 1.2rem;
+  }
+}
+

@@ -121,3 +121,27 @@ document.getElementById("messageForm").addEventListener("submit", async function
     alert("Oops! There was a problem.");
   }
 });
+
+// Evidence Modal Logic
+const evidenceModal = document.getElementById("evidenceModal");
+const openEvidenceBtn = document.getElementById("openEvidence");
+const closeEvidenceBtn = document.querySelector(".close-evidence");
+
+if (openEvidenceBtn) {
+  openEvidenceBtn.onclick = function(e) {
+    e.stopPropagation(); // prevent carousel from moving
+    evidenceModal.style.display = "flex";
+  }
+}
+
+if (closeEvidenceBtn) {
+  closeEvidenceBtn.onclick = function() {
+    evidenceModal.style.display = "none";
+  }
+}
+
+window.onclick = function(event) {
+  if (event.target == evidenceModal) {
+    evidenceModal.style.display = "none";
+  }
+}
