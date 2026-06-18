@@ -32,7 +32,7 @@ body {
 .carousel-item {
   --items: 10;
   --width: clamp(290px, 70vw, 600px);
-  --height: clamp(450px, 100vw, 800px);
+  --height: clamp(480px, 100vw, 800px);
   --x: calc(var(--active) * 800%);
   --y: calc(var(--active) * 200%);
   --rot: calc(var(--active) * 120deg);
@@ -86,7 +86,7 @@ body {
   );
 }
 .carousel-item .carousel-description {
-  font-size: clamp(14px, 3.5vw, 24px);
+  font-size: clamp(12px, 3.2vw, 22px);
   position: absolute;
   z-index: 1;
   color: #fff;
@@ -285,51 +285,32 @@ body {
 
 .floating-flowers span {
   position: absolute;
-  bottom: -50px;
-  width: 20px;
-  height: 20px;
-  background: rgba(255, 77, 109, 0.2);
-  border-radius: 50% 50% 0 50%;
-  transform: rotate(-45deg);
+  bottom: -100px;
+  width: clamp(20px, 5vw, 40px);
+  height: clamp(20px, 5vw, 40px);
+  background-image: url("img/flower.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.15;
+  filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.5));
   animation:
     float 15s infinite linear,
-    sway 3s infinite ease-in-out;
-}
-
-/* Simple CSS Flower Shape */
-.floating-flowers span::before,
-.floating-flowers span::after {
-  content: "";
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  background: inherit;
-  border-radius: 50%;
-}
-
-.floating-flowers span::before {
-  top: -10px;
-  left: 0;
-}
-
-.floating-flowers span::after {
-  left: 10px;
-  top: 0;
+    sway 4s infinite ease-in-out;
 }
 
 @keyframes float {
   0% {
-    transform: translateY(0) rotate(-45deg);
+    transform: translateY(0) rotate(0deg);
     opacity: 0;
   }
   10% {
-    opacity: 0.5;
+    opacity: 0.15;
   }
   90% {
-    opacity: 0.5;
+    opacity: 0.15;
   }
   100% {
-    transform: translateY(-120vh) rotate(45deg);
+    transform: translateY(-120vh) rotate(360deg);
     opacity: 0;
   }
 }
@@ -340,63 +321,69 @@ body {
     margin-left: 0;
   }
   50% {
-    margin-left: 50px;
+    margin-left: 30px;
   }
 }
 
 /* Variation for each flower */
 .floating-flowers span:nth-child(1) {
-  left: 10%;
+  left: 5%;
   animation-delay: 0s;
+  animation-duration: 18s;
   transform: scale(0.6);
 }
 .floating-flowers span:nth-child(2) {
-  left: 20%;
+  left: 15%;
   animation-delay: 2s;
+  animation-duration: 22s;
   transform: scale(0.8);
-  animation-duration: 18s;
 }
 .floating-flowers span:nth-child(3) {
-  left: 35%;
+  left: 25%;
   animation-delay: 4s;
+  animation-duration: 20s;
   transform: scale(0.5);
 }
 .floating-flowers span:nth-child(4) {
-  left: 50%;
+  left: 35%;
   animation-delay: 6s;
+  animation-duration: 16s;
   transform: scale(1.1);
-  animation-duration: 12s;
 }
 .floating-flowers span:nth-child(5) {
-  left: 65%;
+  left: 45%;
   animation-delay: 1s;
+  animation-duration: 25s;
   transform: scale(0.7);
 }
 .floating-flowers span:nth-child(6) {
-  left: 80%;
+  left: 55%;
   animation-delay: 3s;
+  animation-duration: 19s;
   transform: scale(0.9);
-  animation-duration: 20s;
 }
 .floating-flowers span:nth-child(7) {
-  left: 15%;
+  left: 65%;
   animation-delay: 5s;
+  animation-duration: 21s;
   transform: scale(0.4);
 }
 .floating-flowers span:nth-child(8) {
-  left: 45%;
+  left: 75%;
   animation-delay: 7s;
+  animation-duration: 17s;
   transform: scale(1.2);
-  animation-duration: 14s;
 }
 .floating-flowers span:nth-child(9) {
-  left: 70%;
+  left: 85%;
   animation-delay: 2.5s;
+  animation-duration: 23s;
   transform: scale(0.6);
 }
 .floating-flowers span:nth-child(10) {
-  left: 90%;
+  left: 95%;
   animation-delay: 4.5s;
+  animation-duration: 15s;
   transform: scale(0.8);
 }
 
@@ -479,10 +466,6 @@ body {
 
 @media screen and (max-width: 700px) {
   .evidence-content {
-    width: 95%;
-  }
-}
-ent {
     width: 95%;
   }
 }

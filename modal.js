@@ -1,4 +1,4 @@
-const ACCESS_PASSWORD = "u-pride";
+const ACCESS_PASSWORD = "caaa";
 
 document.getElementById("loginBtn").addEventListener("click", () => {
   const input = document.getElementById("accessCode").value;
